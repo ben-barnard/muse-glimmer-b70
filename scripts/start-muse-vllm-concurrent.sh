@@ -34,6 +34,7 @@ test -f "$PATCH"
       --no-enable-prefix-caching --served-model-name muse-glimmer-gptq \
       --language-model-only --reasoning-parser muse_glimmer \
       --enable-auto-tool-choice --tool-call-parser muse_glimmer \
+      --generation-config auto \
       --speculative-config '\''{"method":"dflash","model":"/draft","num_speculative_tokens":4,"quantization":"gptq"}'\''
   '
 echo "Started $NAME: http://127.0.0.1:$PORT/v1 (C8, DFlash K4, 131072 context)"
